@@ -1,0 +1,41 @@
+--- a/Tests/CMakeLists.txt.orig	2019-08-20 22:42:04.250844717 +0200
++++ b/Tests/CMakeLists.txt	2019-08-20 22:42:33.413630010 +0200
+@@ -1008,22 +1008,22 @@
+     --build-options -DCMAKE_BUILD_TYPE=\${CTEST_CONFIGURATION_TYPE}
+     )
+   list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/QtAutomocNoQt")
+-
+-  find_package(Qt5Widgets QUIET NO_MODULE)
+-  if(Qt5Widgets_FOUND)
+-    add_test(Qt5Automoc ${CMAKE_CTEST_COMMAND}
+-      --build-and-test
+-      "${CMake_SOURCE_DIR}/Tests/QtAutomoc"
+-      "${CMake_BINARY_DIR}/Tests/Qt5Automoc"
+-      ${build_generator_args}
+-      --build-project QtAutomoc
+-      --build-exe-dir "${CMake_BINARY_DIR}/Tests/Qt5Automoc"
+-      --force-new-ctest-process
+-      --build-options -DQT_QMAKE_EXECUTABLE:FILEPATH=${QT_QMAKE_EXECUTABLE} -DQT_TEST_VERSION=5
+-      --test-command ${CMAKE_CTEST_COMMAND} -V
+-      )
+-    list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/Qt5Automoc")
+-  endif()
++# 
++#   find_package(Qt5Widgets QUIET NO_MODULE)
++#   if(Qt5Widgets_FOUND)
++#     add_test(Qt5Automoc ${CMAKE_CTEST_COMMAND}
++#       --build-and-test
++#       "${CMake_SOURCE_DIR}/Tests/QtAutomoc"
++#       "${CMake_BINARY_DIR}/Tests/Qt5Automoc"
++#       ${build_generator_args}
++#       --build-project QtAutomoc
++#       --build-exe-dir "${CMake_BINARY_DIR}/Tests/Qt5Automoc"
++#       --force-new-ctest-process
++#       --build-options -DQT_QMAKE_EXECUTABLE:FILEPATH=${QT_QMAKE_EXECUTABLE} -DQT_TEST_VERSION=5
++#       --test-command ${CMAKE_CTEST_COMMAND} -V
++#       )
++#     list(APPEND TEST_BUILD_DIRS "${CMake_BINARY_DIR}/Tests/Qt5Automoc")
++#   endif()
+   if(QT4_WORKS AND QT_QTGUI_FOUND)
+     add_test(Qt4Automoc ${CMAKE_CTEST_COMMAND}
+       --build-and-test

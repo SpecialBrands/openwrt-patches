@@ -1,0 +1,10 @@
+--- a/lib/blkid/devname.c	2012-07-06 15:37:27.000000000 +0200
++++ b/lib/blkid/devname.c	2019-07-11 13:02:02.331799990 +0200
+@@ -13,6 +13,7 @@
+ 
+ #define _GNU_SOURCE 1
+ 
++#include <sys/sysmacros.h>
+ #include "config.h"
+ #include <stdio.h>
+ #include <string.h>

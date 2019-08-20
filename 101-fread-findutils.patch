@@ -1,0 +1,11 @@
+--- a/gnulib/lib/freadahead.c	2009-05-10 23:23:57.000000000 +0200
++++ b/gnulib/lib/freadahead.c	2019-07-11 13:10:52.842728211 +0200
+@@ -22,7 +22,7 @@
+ size_t
+ freadahead (FILE *fp)
+ {
+-#if defined _IO_ferror_unlocked     /* GNU libc, BeOS */
++#if defined _IO_EOF_SEEN || __GNU_LIBRARY__ == 1 /* GNU libc, BeOS, Haiku, Linux libc5 */
+   if (fp->_IO_write_ptr > fp->_IO_write_base)
+     return 0;
+   return fp->_IO_read_end - fp->_IO_read_ptr;

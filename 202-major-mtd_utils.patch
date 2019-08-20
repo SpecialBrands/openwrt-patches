@@ -1,0 +1,40 @@
+--- a/ubi-utils/libubi.c	2015-05-24 04:56:24.000000000 +0200
++++ b/ubi-utils/libubi.c	2019-07-11 13:02:02.347799955 +0200
+@@ -22,6 +22,7 @@
+ 
+ #define PROGRAM_NAME "libubi"
+ 
++#include <sys/sysmacros.h>
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <string.h>
+--- a/mkfs.jffs2.c	2019-08-20 21:22:30.254125070 +0200
++++ b/mkfs.jffs2.c	2019-07-11 13:02:02.351799948 +0200
+@@ -49,6 +49,7 @@
+ 
+ #define PROGRAM_NAME "mkfs.jffs2"
+ 
++#include <sys/sysmacros.h>
+ #include <sys/types.h>
+ #include <stdio.h>
+ #include <sys/stat.h>
+--- a/mkfs.ubifs/devtable.c	2019-08-20 21:31:14.824642162 +0200
++++ b/mkfs.ubifs/devtable.c	2019-07-11 13:02:02.351799948 +0200
+@@ -44,6 +44,7 @@
+  * for more information about what the device table is.
+  */
+ 
++#include <sys/sysmacros.h>
+ #include "mkfs.ubifs.h"
+ #include "hashtable/hashtable.h"
+ #include "hashtable/hashtable_itr.h"
+--- a/mkfs.ubifs/mkfs.ubifs.c	2019-08-20 21:33:40.403834336 +0200
++++ b/mkfs.ubifs/mkfs.ubifs.c	2019-07-11 13:02:02.351799948 +0200
+@@ -22,6 +22,7 @@
+ 
+ #define _XOPEN_SOURCE 500 /* For realpath() */
+ 
++#include <sys/sysmacros.h>
+ #include "mkfs.ubifs.h"
+ #include <crc32.h>
+ #include "common.h"

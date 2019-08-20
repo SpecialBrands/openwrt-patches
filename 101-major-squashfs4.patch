@@ -1,0 +1,20 @@
+--- a/squashfs-tools/mksquashfs.c.orig	2019-08-20 23:04:35.848650693 +0200
++++ b/squashfs-tools/mksquashfs.c	2019-08-20 23:05:19.872624675 +0200
+@@ -49,6 +49,7 @@
+ #include <regex.h>
+ #include <fnmatch.h>
+ #include <sys/wait.h>
++#include <sys/sysmacros.h>
+ 
+ #ifndef linux
+ #define __BYTE_ORDER BYTE_ORDER
+--- a/squashfs-tools/unsquashfs.c	2019-08-20 23:06:13.260608115 +0200
++++ b/squashfs-tools/unsquashfs.c.orig	2019-08-20 23:03:45.432695633 +0200
+@@ -30,6 +30,7 @@
+ #include "xattr.h"
+ 
+ #include <sys/types.h>
++#include <sys/sysmacros.h>
+ 
+ struct cache *fragment_cache, *data_cache;
+ struct queue *to_reader, *to_deflate, *to_writer, *from_writer;

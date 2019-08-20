@@ -1,0 +1,10 @@
+--- a/contents.c	2015-05-01 18:14:41.000000000 +0200
++++ b/contents.c	2019-08-20 21:07:04.479708195 +0200
+@@ -14,6 +14,7 @@
+  * limitations under the License.
+  */
+ 
++#include <sys/sysmacros.h>
+ #include <sys/stat.h>
+ #include <string.h>
+ #include <stdio.h>
